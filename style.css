@@ -1,0 +1,251 @@
+/* ✅ Importazione dei font da Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ✅ Definizione di un font locale (assicurati di avere il percorso corretto per il file .ttf) */
+@font-face {
+    font-family: 'EB Garamond'; /* Nome del font */
+    src: url('path-to-flanker-griffo-font.ttf'); /* Sostituisci con il percorso corretto del file .ttf */
+}
+
+/* ✅ Stile globale per il corpo della pagina */
+body {
+  margin: 0;
+  font-family: 'EB Garamond', sans-serif;
+  background-image: url('Background/background\ 16.9.JPG');
+  background-size: cover; /* Copre tutto lo schermo */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh; /* Altezza sicura su tutti i dispositivi */
+  color: white;
+  text-align: center;
+}
+
+/* ✅ Stile per il titolo h1 */
+h1 {
+  font-family: 'EB Garamond', serif; /* Font personalizzato per il titolo */
+  font-size: 3rem; /* Imposta la dimensione del font */
+  padding-top: 18px; /* Distanza dal bordo superiore */
+  margin-bottom: 20px; /* Distanza dal bordo inferiore */
+  color: #c8b8b3; /* Colore del testo del titolo */
+}
+
+/* ✅ Descrizione sotto il titolo */
+.description {
+  font-family: 'EB Garamond', serif; /* Font personalizzato per la descrizione */
+  font-size: 1.1rem; /* Imposta la dimensione del font */
+  padding-top: 28px; /* Distanza dal bordo superiore */
+  margin-bottom: 20px; /* Distanza dal bordo inferiore */
+  color: #c8b8b3; /* Colore del testo */
+}
+
+/* ✅ Stile per la galleria di immagini */
+.gallery-wrapper {
+    position: relative; /* Posizionamento relativo per il contenitore */
+    display: flex; /* Flexbox per allineare gli elementi */
+    align-items: center; /* Allinea gli elementi verticalmente */
+    justify-content: center; /* Allinea gli elementi orizzontalmente */
+    margin: auto; /* Allinea il contenitore al centro */
+    max-width: 90%; /* Limita la larghezza massima al 90% della pagina */
+    height: 60vh; /* Imposta l'altezza al 60% della viewport */
+    width: 100%; /* Imposta la larghezza al 100% del contenitore */
+    overflow: hidden; /* Nasconde qualsiasi contenuto che esce dal contenitore */
+    padding: 40px 60px; /* Spazio per le frecce a sinistra e a destra */
+}
+
+/* ✅ Stile per la galleria scorrevole orizzontale */
+.scrollable-gallery {
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    display: flex; /* Flexbox per disporre le immagini in linea */
+    scroll-behavior: smooth; /* Abilita lo scorrimento fluido */
+    white-space: nowrap; /* Impedisce che le immagini vadano a capo */
+    gap: 15px; /* Distanza tra le immagini */
+    scrollbar-width: none; /* Nasconde la barra di scorrimento su Firefox */
+}
+
+/* ✅ Nascondi la barra di scorrimento su Chrome/Safari */
+.scrollable-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+/* ✅ Stile per le immagini della galleria */
+.gallery-item {
+    width: 300px; /* Imposta la larghezza per ogni immagine */
+    height: 200px; /* Imposta l'altezza per ogni immagine */
+    object-fit: cover; /* Adatta l'immagine al contenitore senza deformarla */
+    border-radius: 10px; /* Angoli arrotondati per le immagini */
+    flex: 0 0 auto; /* Impedisce che le immagini vengano ridimensionate */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effetto di transizione per il hover */
+}
+
+/* ✅ Effetto hover per ingrandire l'immagine e aggiungere una ombra */
+.gallery-item:hover {
+    transform: scale(1.05); /* Ingrandisce l'immagine */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Aggiunge una leggera ombra */
+}
+
+/* ✅ Stile per la modale (finestra che appare per visualizzare l'immagine ingrandita) */
+.modal {
+  display: none; /* Modale nascosta di default */
+  position: fixed; /* Posizionamento fisso rispetto alla finestra del browser */
+  z-index: 1; /* Assicurati che la modale sia sopra al contenuto */
+  left: 0;
+  top: 0;
+  width: 100%; /* Copre l'intera larghezza della finestra */
+  height: 100%; /* Copre l'intera altezza della finestra */
+  background-color: rgba(0, 0, 0, 0.8); /* Sfondo semitrasparente per oscurare il contenuto */
+  justify-content: center; /* Centra il contenuto della modale */
+  align-items: center; /* Allinea il contenuto della modale al centro */
+  text-align: center; /* Allinea il testo al centro */
+}
+
+/* ✅ Immagine nella modale */
+.modal-content {
+  max-width: 90%; /* La larghezza massima dell'immagine sarà il 90% della finestra */
+  max-height: 90%; /* La massima altezza dell'immagine sarà il 90% della finestra */
+  margin: auto; /* Centra l'immagine orizzontalmente */
+  display: block; /* Imposta l'immagine come blocco */
+}
+
+/* ✅ Pulsante di chiusura della modale */
+.close {
+  color: #fff; /* Colore del testo */
+  font-size: 30px; /* Dimensione del font */
+  position: absolute; /* Posizionamento assoluto per il pulsante di chiusura */
+  top: 10px;
+  right: 25px;
+  font-weight: bold; /* Grassetto per il pulsante */
+  cursor: pointer; /* Mostra il cursore a mano quando sopra il pulsante */
+}
+
+/* ✅ Pulsante "Entra" (inizialmente visibile nella homepage) */
+#entrata-btn {
+  padding: 10px 30px;  /* Spaziatura maggiore rispetto al tasto rotondo */
+  font-size: 1.2rem; /* Dimensione del font */
+  color: #c8b8b3; /* Colore del testo */
+  background-color: #5a3d31; /* Colore di sfondo del pulsante */
+  border: none; /* Rimuove il bordo */
+  border-radius: 8px; /* Angoli arrotondati */
+  cursor: pointer; /* Mostra il cursore a mano */
+  box-shadow: 2px 2px 10px #000; /* Aggiunge un'ombra */
+  margin: 10px; /* Spazio attorno al pulsante */
+  transition: background-color 0.3s ease; /* Transizione per il cambio di colore al passaggio del mouse */
+}
+
+/* ✅ Effetto hover sul pulsante "Entra" */
+#entrata-btn:hover {
+  background-color: #7a5d51; /* Cambia il colore di sfondo al passaggio del mouse */
+}
+
+/* ✅ Pulsanti di navigazione per la galleria (freccia sinistra e destra) */
+.arrow, .button-left, .button-right {
+    position: absolute; /* Posizionamento assoluto */
+    top: 50%; /* Posiziona il pulsante al centro verticale */
+    transform: translateY(-50%); /* Centra verticalmente il pulsante */
+    z-index: 10; /* Assicura che i pulsanti siano sopra al contenuto */
+    background: rgba(255, 255, 255, 0.2); /* Sfondo semitrasparente */
+    border: none; /* Rimuove il bordo */
+    color: #c8b8b3; /* Colore del testo */
+    font-size: 1.2rem; /* Dimensione del font */
+    padding: 10px 20px; /* Spaziatura interna */
+    cursor: pointer; /* Mostra il cursore a mano quando sopra il pulsante */
+    border-radius: 5px; /* Angoli arrotondati */
+    box-shadow: 2px 2px 10px #000; /* Ombra per i pulsanti */
+    margin: 10px; /* Distanza dai bordi */
+}
+
+/* ✅ Effetto hover per le frecce di navigazione */
+.arrow:hover, .button-left:hover, .button-right:hover {
+    background-color: #7a5d51; /* Cambia il colore al passaggio del mouse */
+}
+
+/* ✅ Posizione dei pulsanti sinistro e destro */
+.button-left {
+    left: 10px;
+}
+
+.button-right {
+  right: 10px;
+}
+
+/* ✅ Stile per la sezione dei contatti */
+.contacts {
+  font-family: 'EB Garamond', serif; /* Font coerente con il resto del sito */
+  color: #c8b8b3; /* Colore del testo coerente */
+  text-align: center; /* Allineamento del testo al centro */
+  padding: 20px; /* Spaziatura interna */
+}
+
+/* 📱 Responsive Design per Smartphone */
+@media (max-width: 768px) {
+  
+  /* ✅ Adattamento generale */
+  body {
+    background-size: cover; /* Rimane cover */
+    background-attachment: scroll; /* Scroll invece di fixed per evitare problemi su mobile */
+    padding: 10px; /* Leggero padding interno */
+    height: auto; /* Evita forzature sull'altezza */
+  }
+  
+  h1 {
+    font-size: 2rem; /* Riduce la dimensione del titolo */
+    padding-top: 10px;
+  }
+
+  .description {
+    font-size: 1rem; /* Descrizione leggermente più piccola */
+    padding-top: 15px;
+  }
+
+  /* ✅ Galleria wrapper */
+  .gallery-wrapper {
+    flex-direction: column; /* Da orizzontale a verticale */
+    height: auto; /* Altezza automatica */
+    padding: 20px 10px; /* Meno padding laterale */
+  }
+  
+  /* ✅ Galleria scrollabile */
+  .scrollable-gallery {
+    flex-wrap: wrap; /* Permette di andare a capo */
+    overflow-x: hidden; /* Niente scroll orizzontale */
+    justify-content: center; /* Centra le immagini */
+    gap: 10px; /* Meno spazio tra immagini */
+  }
+  
+  /* ✅ Immagini della galleria */
+  .gallery-item {
+    width: 90%; /* Occupa quasi tutta la larghezza disponibile */
+    height: auto; /* Altezza automatica per mantenere proporzioni */
+    max-width: 300px; /* Non andare oltre la larghezza desktop */
+    margin: 5px 0; /* Spazio verticale tra immagini */
+    border-radius: 10px; /* Mantieni angoli arrotondati */
+  }
+
+  /* ✅ Pulsanti (freccette) */
+  .button-left, .button-right {
+    display: none; /* Nascondi le frecce su mobile */
+  }
+
+  /* ✅ Modale */
+  .modal-content {
+    max-width: 95%; /* Ancora più responsive */
+    max-height: 80vh;
+  }
+
+  /* ✅ Pulsante "Entra" */
+  #entrata-btn {
+    padding: 8px 20px;
+    font-size: 1rem;
+    margin: 8px;
+  }
+
+  /* ✅ Sezione contatti */
+  .contacts {
+    font-size: 0.9rem; /* Testo più compatto */
+    padding: 15px;
+  }
+}
