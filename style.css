@@ -23,7 +23,21 @@
   align-items: center;
   color: white;
   text-align: center;
+    position: relative;
 }
+
+.home-body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2); /* velo leggero nero trasparente */
+  pointer-events: none; /* così non blocca i clic */
+  z-index: 0;
+}
+
 
 .gallery-body {
   margin: 0;
