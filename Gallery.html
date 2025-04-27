@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- ✅ Impostazione della codifica dei caratteri per supportare caratteri speciali -->
+    <meta charset="UTF-8">
+
+    <!-- ✅ Impostazione per dispositivi mobili per un design reattivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Titolo della pagina (importante per SEO e per gli utenti) -->
+    <title>I Nostri Lavori</title>
+
+    <!-- ✅ Collegamento al file CSS principale per la formattazione della pagina -->
+    <link rel="stylesheet" href="Falegnameria TRE G.css">
+
+    <!-- ✅ Inclusione delle icone Font Awesome per le icone nei contatti -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="gallery-body">
+    <!-- ✅ Titolo principale della pagina -->
+    <h1>Galleria Lavori</h1>
+
+    <!-- ✅ Descrizione dell'azienda e dei suoi servizi -->
+    <div class="description">
+        Offriamo una vasta gamma di soluzioni su misura per ogni esigenza: realizziamo porte interne, blindate, 
+        finestre e persiane, oltre a zanzariere e tapparelle di tutti i tipi.<br> 
+        Progettiamo e creiamo mobili e cucine su misura, garantendo qualità artigianale.<br> 
+        Inoltre, ci occupiamo del restauro di portoni, persiane e finestre, 
+        e forniamo un servizio completo di riparazione per qualsiasi struttura in legno.
+    </div>
+
+    <!-- ✅ Galleria di immagini, inclusi i bottoni per la navigazione -->
+    <div class="gallery-wrapper">
+        <!-- ✅ Bottone di navigazione per scorrere a sinistra -->
+        <button class="arrow button-left">❮</button>
+
+        <!-- ✅ Galleria di immagini, è un contenitore scrollabile -->
+        <div class="gallery scrollable-gallery">
+            <!-- ✅ Ogni immagine della galleria -->
+            <img src="Galleria/Foto (1).jpg" alt="Foto 1" class="gallery-item">
+            <img src="Galleria/Foto (2).jpg" alt="Foto 2" class="gallery-item">
+            <img src="Galleria/Foto (3).jpg" alt="Foto 3" class="gallery-item">
+            <img src="Galleria/Foto (4).jpg" alt="Foto 4" class="gallery-item">
+            <img src="Galleria/Foto (5).jpg" alt="Foto 5" class="gallery-item">
+            <img src="Galleria/Foto (6).jpg" alt="Foto 6" class="gallery-item">
+            <img src="Galleria/Foto (7).jpg" alt="Foto 7" class="gallery-item">
+            <img src="Galleria/Foto (8).jpg" alt="Foto 8" class="gallery-item">
+            <img src="Galleria/Foto (9).jpg" alt="Foto 9" class="gallery-item">
+            <img src="Galleria/Foto (10).jpg" alt="Foto 10" class="gallery-item">
+            <img src="Galleria/Foto (11).jpg" alt="Foto 11" class="gallery-item">
+            <img src="Galleria/Foto (12).jpg" alt="Foto 12" class="gallery-item">
+            <img src="Galleria/Foto (13).jpg" alt="Foto 13" class="gallery-item">
+            <img src="Galleria/Foto (14).jpg" alt="Foto 14" class="gallery-item">
+            <img src="Galleria/Foto (15).jpg" alt="Foto 15" class="gallery-item">
+            <img src="Galleria/Foto (16).jpg" alt="Foto 16" class="gallery-item">
+            <img src="Galleria/Foto (17).jpg" alt="Foto 17" class="gallery-item">
+            <img src="Galleria/Foto (18).jpg" alt="Foto 18" class="gallery-item">
+            <img src="Galleria/Foto (19).jpg" alt="Foto 19" class="gallery-item">
+            <img src="Galleria/Foto (20).jpg" alt="Foto 20" class="gallery-item">
+            <img src="Galleria/Foto (21).jpg" alt="Foto 21" class="gallery-item">
+            <img src="Galleria/Foto (22).jpg" alt="Foto 22" class="gallery-item">
+            <img src="Galleria/Foto (23).jpg" alt="Foto 23" class="gallery-item">
+            <img src="Galleria/Foto (24).jpg" alt="Foto 24" class="gallery-item">
+            <img src="Galleria/Foto (25).jpg" alt="Foto 25" class="gallery-item">
+            <img src="Galleria/Foto (26).jpg" alt="Foto 26" class="gallery-item">
+            <img src="Galleria/Foto (27).jpg" alt="Foto 27" class="gallery-item">
+            <img src="Galleria/Foto (28).jpg" alt="Foto 28" class="gallery-item">
+            <img src="Galleria/Foto (29).jpg" alt="Foto 29" class="gallery-item">
+            <img src="Galleria/Foto (30).jpg" alt="Foto 30" class="gallery-item">
+            <img src="Galleria/Foto (31).jpg" alt="Foto 31" class="gallery-item">
+            <img src="Galleria/Foto (32).jpg" alt="Foto 32" class="gallery-item">
+        </div>
+
+        <!-- ✅ Bottone di navigazione per scorrere a destra -->
+        <button class="arrow button-right">❯</button>
+    </div>
+
+    <!-- ✅ Modale per visualizzare l'immagine a schermo intero -->
+    <div class="modal" id="image-modal">
+        <!-- ✅ Freccia per navigazione precedente nell'immagine modale -->
+        <span class="modal-arrow" id="modal-prev">❮</span>
+        
+        <!-- ✅ Immagine modale che verrà sostituita tramite JavaScript -->
+        <img class="modal-content" id="modal-img">
+        
+        <!-- ✅ Freccia per navigazione successiva nell'immagine modale -->
+        <span class="modal-arrow" id="modal-next">❯</span>
+        
+        <!-- ✅ Pulsante per chiudere la modale -->
+        <span class="close" id="close-modal">&times;</span>
+    </div>
+
+    <!-- ✅ Sezione contatti con icone di Font Awesome -->
+    <section class="contacts">
+        <!-- ✅ Contatto con indirizzo -->
+        <div class="contact-item">
+            <i class="fas fa-map-marker"></i>
+            <span class="contact-text">Milano - Via Lodovico Muratori 11</span>
+        </div>
+        
+        <!-- ✅ Contatto telefonico -->
+        <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <span class="contact-text">+39 338 194 5408  / +39 338 413 8898</span>
+        </div>
+        
+        <!-- ✅ Contatto email -->
+        <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">genuariomario@libero.it</span>
+        </div>
+    </section>
+
+    <!-- ✅ Collega il file JavaScript per la logica della modale -->
+    <script src="Gallery.js"></script>
+</body>
+</html>
