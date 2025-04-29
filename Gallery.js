@@ -151,13 +151,14 @@ function setupModalWithNavigation() {
         }
     }
 
-    // Doppio clic sull'immagine per aprire la modale
-    images.forEach((img, index) => {
-        img.addEventListener('dblclick',
-            showImage(index);
-            toggleGalleryButtons(false); // Nasconde i pulsanti quando la modale è aperta
-        });
+    // Click singolo per aprire la modale su PC e smartphone
+images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+        showImage(index);
+        modal.style.display = 'flex'; // Mostra la modale
+        toggleGalleryButtons(false);  // Nasconde i pulsanti quando la modale è aperta
     });
+});
 
     // Naviga tra le immagini
     prevBtn.addEventListener('click', () => {
