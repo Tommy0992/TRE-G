@@ -140,6 +140,11 @@ function setupModalWithNavigation() {
     const prevBtn = document.getElementById('modal-prev');
     const nextBtn = document.getElementById('modal-next');
     let currentIndex = 0;
+    if (isMobileDevice()) {// Nasconde i pulsanti di navigazione su dispositivi mobili
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'none';
+}
+
 
     if (!modal || !modalImg || !closeModal || !prevBtn || !nextBtn || images.length === 0) return;
 
