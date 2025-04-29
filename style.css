@@ -210,3 +210,23 @@ h1 {
   text-align: center;
   padding: 20px;
 }
+
+@media (max-width: 600px) {
+  .gallery-wrapper {
+    padding: 0 10px; /* ⬅️ Riduce lo spazio laterale */
+  }
+
+  .scrollable-gallery {
+    gap: 6px; /* ⬅️ Spaziatura tra immagini più stretta */
+  }
+
+  .gallery-item {
+    width: 220px;  /* ⬅️ Immagini più piccole */
+    height: 140px;
+  }
+
+  .arrow, .button-left, .button-right {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
