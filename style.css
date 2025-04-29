@@ -213,20 +213,35 @@ h1 {
 
 @media (max-width: 600px) {
   .gallery-wrapper {
-    padding: 0 0px; /* ⬅️ Riduce lo spazio laterale */
+    padding: 0;
   }
 
   .scrollable-gallery {
-    gap: 6px; /* ⬅️ Spaziatura tra immagini più stretta */
+    gap: 6px;
   }
 
   .gallery-item {
-    width: 220px;  /* ⬅️ Immagini più piccole */
+    width: 220px;
     height: 140px;
   }
 
   .arrow, .button-left, .button-right {
-    font-size: 1rem;
-    padding: 6px 12px;
+    display: none; /* ⬅️ Nasconde le frecce su mobile */
+  }
+
+  .modal-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 10px;
+  }
+
+  .modal-content img {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    max-height: 80vh;
+    width: auto;
   }
 }
+
