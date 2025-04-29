@@ -213,7 +213,7 @@ h1 {
 
 @media (max-width: 600px) {
   .gallery-wrapper {
-    padding: 0 10px; /* ⬅️ Riduce lo spazio laterale */
+    padding: 0 0px; /* ⬅️ Riduce lo spazio laterale */
   }
 
   .scrollable-gallery {
