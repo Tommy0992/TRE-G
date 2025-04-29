@@ -140,7 +140,10 @@ function setupModalWithNavigation() {
     const prevBtn = document.getElementById('modal-prev');
     const nextBtn = document.getElementById('modal-next');
     let currentIndex = 0;
-    if (isMobileDevice()) {// Nasconde i pulsanti di navigazione su dispositivi mobili
+}
+
+    // Nasconde i pulsanti di navigazione su dispositivi mobili
+    if (isMobileDevice()) {
     prevBtn.style.display = 'none';
     nextBtn.style.display = 'none';
 }
