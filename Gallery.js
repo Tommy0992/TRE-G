@@ -153,8 +153,7 @@ function setupModalWithNavigation() {
 
     // Doppio clic sull'immagine per aprire la modale
     images.forEach((img, index) => {
-        img.addEventListener('dblclick', function () {
-            openModal(this.src);
+        img.addEventListener('dblclick',
             showImage(index);
             toggleGalleryButtons(false); // Nasconde i pulsanti quando la modale è aperta
         });
