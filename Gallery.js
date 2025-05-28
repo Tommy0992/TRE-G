@@ -140,14 +140,6 @@ function setupModalWithNavigation() {
     const prevBtn = document.getElementById('modal-prev');
     const nextBtn = document.getElementById('modal-next');
     let currentIndex = 0;
-}
-
-    // Nasconde i pulsanti di navigazione su dispositivi mobili
-    if (isMobileDevice()) {
-    prevBtn.style.display = 'none';
-    nextBtn.style.display = 'none';
-}
-
 
     if (!modal || !modalImg || !closeModal || !prevBtn || !nextBtn || images.length === 0) return;
 
@@ -159,14 +151,14 @@ function setupModalWithNavigation() {
         }
     }
 
-    // Click singolo per aprire la modale su PC e smartphone
-images.forEach((img, index) => {
-    img.addEventListener('click', () => {
-        showImage(index);
-        modal.style.display = 'flex'; // Mostra la modale
-        toggleGalleryButtons(false);  // Nasconde i pulsanti quando la modale è aperta
+    // Doppio clic sull'immagine per aprire la modale
+    images.forEach((img, index) => {
+        img.addEventListener('dblclick', () => {
+            modal.style.display = 'flex';
+            showImage(index);
+            toggleGalleryButtons(false); // Nasconde i pulsanti quando la modale è aperta
+        });
     });
-});
 
     // Naviga tra le immagini
     prevBtn.addEventListener('click', () => {
