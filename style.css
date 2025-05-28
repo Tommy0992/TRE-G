@@ -3,15 +3,15 @@
 
 /* ✅ Definizione di un font locale (assicurati di avere il percorso corretto per il file .ttf) */
 @font-face {
-    font-family: 'EB Garamond'; /* Nome del font */
-    src: url('path-to-flanker-griffo-font.ttf'); /* Sostituisci con il percorso corretto del file .ttf */
+  font-family: 'EB Garamond';
+  src: url('EB_Garamond/EBGaramond-Italic-VariableFont_wght.ttf') format('ttf');
 }
 
 /* ✅ Stili separati per Home e Gallery */
 .home-body {
   margin: 0;
   font-family: 'EB Garamond', sans-serif;
-  background-image: url('Sfondo 1792x1094 (4)1.webp');
+  background-image: url('Background/Sfondo\ 1792x1094\ \(4\).jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -23,26 +23,12 @@
   align-items: center;
   color: white;
   text-align: center;
-    position: relative;
 }
-
-.home-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.2); /* velo leggero nero trasparente */
-  pointer-events: none; /* così non blocca i clic */
-  z-index: 0;
-}
-
 
 .gallery-body {
   margin: 0;
   font-family: 'EB Garamond', sans-serif;
-  background-image: url('Sfondo 1792x1094 (4)1.webp');
+  background-image: url('Background/Sfondo\ 1792x1094\ \(4\).jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -213,35 +199,21 @@ h1 {
 
 @media (max-width: 600px) {
   .gallery-wrapper {
-    padding: 0;
+    padding: 0 10px; /* ⬅️ Riduce lo spazio laterale */
   }
 
   .scrollable-gallery {
-    gap: 6px;
+    gap: 6px; /* ⬅️ Spaziatura tra immagini più stretta */
   }
 
   .gallery-item {
-    width: 220px;
+    width: 220px;  /* ⬅️ Immagini più piccole */
     height: 140px;
   }
 
   .arrow, .button-left, .button-right {
-    display: none; /* ⬅️ Nasconde le frecce su mobile */
-  }
-
-  .modal-content {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 10px;
-  }
-
-  .modal-content img {
-    scroll-snap-align: center;
-    flex: 0 0 auto;
-    max-height: 80vh;
-    width: auto;
+    font-size: 1rem;
+    padding: 6px 12px;
   }
 }
 
