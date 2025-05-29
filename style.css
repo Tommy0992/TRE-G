@@ -217,3 +217,12 @@ h1 {
   }
 }
 
+@media (max-width: 768px) {
+  .button-left,
+  .button-right {
+    display: none !important;
+  }
+}
+
+
+
