@@ -18,12 +18,18 @@ function isMobileDevice() {
 }
 
 // 🔄 Funzione per gestire i pulsanti della galleria in base al dispositivo
+let navigationSetupDone = false; // ✅ controllo globale
+
 function handleResponsiveGallery() {
     if (isMobileDevice()) {
         toggleGalleryButtons(false); // Su mobile nascondi i pulsanti
     } else {
         toggleGalleryButtons(true); // Su desktop mostra i pulsanti
-        setupGalleryNavigation('.gallery', '.button-left', '.button-right'); // Imposta navigazione solo su desktop
+
+        if (!navigationSetupDone) {
+            setupGalleryNavigation('.gallery', '.button-left', '.button-right');
+            navigationSetupDone = true; // ⛔ evita esecuzioni multiple
+        }
     }
 }
 
